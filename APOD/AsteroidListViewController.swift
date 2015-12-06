@@ -57,29 +57,5 @@ class AsteroidListViewController: UIViewController, UITableViewDelegate, Asteroi
             }
             .bindTo(tableView.rx_itemsWithDataSource(dataSource))
             .addDisposableTo(disposeBag)
-        
-        // customization using delegate
-        // RxTableViewDelegateBridge will forward correct messages
-        tableView.rx_setDelegate(self)
-            .addDisposableTo(disposeBag)
-    }
-    
-    // MARK: Table view delegate ;)
-    
-    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let title = dataSource.sectionAtIndex(section)
-        
-        let label = UILabel(frame: CGRect.zero)
-        // hacky I know :)
-        label.text = "  \(title)"
-        label.textColor = UIColor.whiteColor()
-        label.backgroundColor = UIColor.darkGrayColor()
-        label.alpha = 0.9
-        
-        return label
-    }
-    
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 40
     }
 }
