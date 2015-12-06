@@ -5,6 +5,7 @@ use_frameworks!
 
 target 'APOD' do
   pod 'Moya/RxSwift'
+  pod 'RxCocoa', '2.0.0-beta.3'
 end
 
 target 'APODTests' do

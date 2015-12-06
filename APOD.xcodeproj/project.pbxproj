@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F68073E1C138837008161F0 /* NASA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F68073D1C138837008161F0 /* NASA.swift */; };
+		1F6807441C13A997008161F0 /* NeoWsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6807431C13A997008161F0 /* NeoWsResponse.swift */; };
+		1F6807461C13A9FD008161F0 /* NearEarthObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6807451C13A9FD008161F0 /* NearEarthObject.swift */; };
+		1F6807491C13B494008161F0 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6807481C13B494008161F0 /* HomeViewModel.swift */; };
 		1FD048A81C13852A00B8FA06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD048A71C13852A00B8FA06 /* AppDelegate.swift */; };
-		1FD048AA1C13852A00B8FA06 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD048A91C13852A00B8FA06 /* ViewController.swift */; };
+		1FD048AA1C13852A00B8FA06 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD048A91C13852A00B8FA06 /* HomeViewController.swift */; };
 		1FD048AD1C13852A00B8FA06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FD048AB1C13852A00B8FA06 /* Main.storyboard */; };
 		1FD048AF1C13852A00B8FA06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FD048AE1C13852A00B8FA06 /* Assets.xcassets */; };
 		1FD048B21C13852A00B8FA06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FD048B01C13852A00B8FA06 /* LaunchScreen.storyboard */; };
@@ -27,9 +31,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F68073D1C138837008161F0 /* NASA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NASA.swift; sourceTree = "<group>"; };
+		1F6807431C13A997008161F0 /* NeoWsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeoWsResponse.swift; sourceTree = "<group>"; };
+		1F6807451C13A9FD008161F0 /* NearEarthObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearEarthObject.swift; sourceTree = "<group>"; };
+		1F6807481C13B494008161F0 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		1FD048A41C13852A00B8FA06 /* APOD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APOD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FD048A71C13852A00B8FA06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1FD048A91C13852A00B8FA06 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1FD048A91C13852A00B8FA06 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		1FD048AC1C13852A00B8FA06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1FD048AE1C13852A00B8FA06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1FD048B11C13852A00B8FA06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -61,6 +69,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F6807401C13A8FF008161F0 /* NASA API */ = {
+			isa = PBXGroup;
+			children = (
+				1F6807411C13A962008161F0 /* Model */,
+				1F68073D1C138837008161F0 /* NASA.swift */,
+			);
+			name = "NASA API";
+			sourceTree = "<group>";
+		};
+		1F6807411C13A962008161F0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1F6807431C13A997008161F0 /* NeoWsResponse.swift */,
+				1F6807451C13A9FD008161F0 /* NearEarthObject.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		1FD0489B1C13852A00B8FA06 = {
 			isa = PBXGroup;
 			children = (
@@ -84,8 +110,10 @@
 		1FD048A61C13852A00B8FA06 /* APOD */ = {
 			isa = PBXGroup;
 			children = (
+				1F6807401C13A8FF008161F0 /* NASA API */,
 				1FD048A71C13852A00B8FA06 /* AppDelegate.swift */,
-				1FD048A91C13852A00B8FA06 /* ViewController.swift */,
+				1FD048A91C13852A00B8FA06 /* HomeViewController.swift */,
+				1F6807481C13B494008161F0 /* HomeViewModel.swift */,
 				1FD048AB1C13852A00B8FA06 /* Main.storyboard */,
 				1FD048AE1C13852A00B8FA06 /* Assets.xcassets */,
 				1FD048B01C13852A00B8FA06 /* LaunchScreen.storyboard */,
@@ -272,7 +300,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FD048AA1C13852A00B8FA06 /* ViewController.swift in Sources */,
+				1F68073E1C138837008161F0 /* NASA.swift in Sources */,
+				1F6807491C13B494008161F0 /* HomeViewModel.swift in Sources */,
+				1F6807461C13A9FD008161F0 /* NearEarthObject.swift in Sources */,
+				1F6807441C13A997008161F0 /* NeoWsResponse.swift in Sources */,
+				1FD048AA1C13852A00B8FA06 /* HomeViewController.swift in Sources */,
 				1FD048A81C13852A00B8FA06 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

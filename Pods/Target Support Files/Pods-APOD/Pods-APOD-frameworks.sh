@@ -86,10 +86,12 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-APOD/Alamofire.framework"
   install_framework "Pods-APOD/Moya.framework"
+  install_framework "Pods-APOD/RxCocoa.framework"
   install_framework "Pods-APOD/RxSwift.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-APOD/Alamofire.framework"
   install_framework "Pods-APOD/Moya.framework"
+  install_framework "Pods-APOD/RxCocoa.framework"
   install_framework "Pods-APOD/RxSwift.framework"
 fi
