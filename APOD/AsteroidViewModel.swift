@@ -22,7 +22,9 @@ struct AsteroidViewModel {
         static let errorText = "<Error>"
     }
     
-    let objects: Driver<[NearEarthObject]>
+    let objectCellViewModels: Driver<[NearEarthObjectViewModel]>
+    
+    private let objects: Driver<[NearEarthObject]>
     private let _objects = PublishSubject<[NearEarthObject]>()
     
     let objectCount: Driver<String>
@@ -39,6 +41,9 @@ struct AsteroidViewModel {
         
         self.objects = _objects.shareReplay(1).asDriver(onErrorJustReturn: [])
         self.objectCount = objects.map { objects in return "\(objects.count)" }
+        
+        self.objectCellViewModels = objects.map { objects in return objects.map { obj in NearEarthObjectViewModel(object: obj) } }
+        
         searchRange
             .filter { (start, end) -> Bool in
                 return start.compare(end) == NSComparisonResult.OrderedAscending

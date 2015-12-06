@@ -9,14 +9,19 @@
 import Foundation
 
 struct NearEarthObject {
-    let isHazardous: Bool
+
+    let name: String
     
+    let isHazardous: Bool
+
     init?(json: AnyObject) {      
         guard let jsonDictionary = json as? [String:AnyObject],
-        let isHazardous = jsonDictionary["is_potentially_hazardous_asteroid"] as? Bool else {
+        let isHazardous = jsonDictionary["is_potentially_hazardous_asteroid"] as? Bool,
+        let name = jsonDictionary["name"] as? String else {
             return nil
         }
         
+        self.name = name
         self.isHazardous = isHazardous
     }
 }

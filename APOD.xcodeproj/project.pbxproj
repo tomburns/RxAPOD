@@ -13,6 +13,23 @@
 		1F6807491C13B494008161F0 /* AsteroidViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6807481C13B494008161F0 /* AsteroidViewModel.swift */; };
 		1F68074B1C13F8DD008161F0 /* AsteroidListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F68074A1C13F8DD008161F0 /* AsteroidListViewController.swift */; };
 		1F68074D1C1400A4008161F0 /* ShowAsteroidListSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F68074C1C1400A4008161F0 /* ShowAsteroidListSegue.swift */; };
+		1F6807501C14856A008161F0 /* NearEarthObjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F68074F1C14856A008161F0 /* NearEarthObjectViewModel.swift */; };
+		1F6807541C14898E008161F0 /* NearEarthObjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6807531C14898E008161F0 /* NearEarthObjectTableViewCell.swift */; };
+		1F6807691C148C36008161F0 /* Changeset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6807591C148C36008161F0 /* Changeset.swift */; };
+		1F68076A1C148C36008161F0 /* RxCollectionViewSectionedAnimatedDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F68075B1C148C36008161F0 /* RxCollectionViewSectionedAnimatedDataSource.swift */; };
+		1F68076B1C148C36008161F0 /* RxCollectionViewSectionedDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F68075C1C148C36008161F0 /* RxCollectionViewSectionedDataSource.swift */; };
+		1F68076C1C148C36008161F0 /* RxCollectionViewSectionedReloadDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F68075D1C148C36008161F0 /* RxCollectionViewSectionedReloadDataSource.swift */; };
+		1F68076D1C148C36008161F0 /* RxTableViewSectionedAnimatedDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F68075E1C148C36008161F0 /* RxTableViewSectionedAnimatedDataSource.swift */; };
+		1F68076E1C148C36008161F0 /* RxTableViewSectionedDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F68075F1C148C36008161F0 /* RxTableViewSectionedDataSource.swift */; };
+		1F68076F1C148C36008161F0 /* RxTableViewSectionedReloadDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6807601C148C36008161F0 /* RxTableViewSectionedReloadDataSource.swift */; };
+		1F6807701C148C36008161F0 /* Differentiator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6807611C148C36008161F0 /* Differentiator.swift */; };
+		1F6807711C148C36008161F0 /* ObservableConvertibleType+Differentiator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6807621C148C36008161F0 /* ObservableConvertibleType+Differentiator.swift */; };
+		1F6807721C148C36008161F0 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 1F6807631C148C36008161F0 /* README.md */; };
+		1F6807731C148C36008161F0 /* RxDataSourceStarterKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6807641C148C36008161F0 /* RxDataSourceStarterKit.swift */; };
+		1F6807741C148C36008161F0 /* SectionedViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6807651C148C36008161F0 /* SectionedViewType.swift */; };
+		1F6807751C148C36008161F0 /* SectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6807661C148C36008161F0 /* SectionModel.swift */; };
+		1F6807761C148C36008161F0 /* SectionModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6807671C148C36008161F0 /* SectionModelType.swift */; };
+		1F6807771C148C36008161F0 /* UISectionedViewType+RxAnimatedDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6807681C148C36008161F0 /* UISectionedViewType+RxAnimatedDataSource.swift */; };
 		1FD048A81C13852A00B8FA06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD048A71C13852A00B8FA06 /* AppDelegate.swift */; };
 		1FD048AA1C13852A00B8FA06 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD048A91C13852A00B8FA06 /* HomeViewController.swift */; };
 		1FD048AD1C13852A00B8FA06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FD048AB1C13852A00B8FA06 /* Main.storyboard */; };
@@ -39,6 +56,23 @@
 		1F6807481C13B494008161F0 /* AsteroidViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsteroidViewModel.swift; sourceTree = "<group>"; };
 		1F68074A1C13F8DD008161F0 /* AsteroidListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsteroidListViewController.swift; sourceTree = "<group>"; };
 		1F68074C1C1400A4008161F0 /* ShowAsteroidListSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowAsteroidListSegue.swift; sourceTree = "<group>"; };
+		1F68074F1C14856A008161F0 /* NearEarthObjectViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearEarthObjectViewModel.swift; sourceTree = "<group>"; };
+		1F6807531C14898E008161F0 /* NearEarthObjectTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearEarthObjectTableViewCell.swift; sourceTree = "<group>"; };
+		1F6807591C148C36008161F0 /* Changeset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Changeset.swift; sourceTree = "<group>"; };
+		1F68075B1C148C36008161F0 /* RxCollectionViewSectionedAnimatedDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxCollectionViewSectionedAnimatedDataSource.swift; sourceTree = "<group>"; };
+		1F68075C1C148C36008161F0 /* RxCollectionViewSectionedDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxCollectionViewSectionedDataSource.swift; sourceTree = "<group>"; };
+		1F68075D1C148C36008161F0 /* RxCollectionViewSectionedReloadDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxCollectionViewSectionedReloadDataSource.swift; sourceTree = "<group>"; };
+		1F68075E1C148C36008161F0 /* RxTableViewSectionedAnimatedDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxTableViewSectionedAnimatedDataSource.swift; sourceTree = "<group>"; };
+		1F68075F1C148C36008161F0 /* RxTableViewSectionedDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxTableViewSectionedDataSource.swift; sourceTree = "<group>"; };
+		1F6807601C148C36008161F0 /* RxTableViewSectionedReloadDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxTableViewSectionedReloadDataSource.swift; sourceTree = "<group>"; };
+		1F6807611C148C36008161F0 /* Differentiator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Differentiator.swift; sourceTree = "<group>"; };
+		1F6807621C148C36008161F0 /* ObservableConvertibleType+Differentiator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ObservableConvertibleType+Differentiator.swift"; sourceTree = "<group>"; };
+		1F6807631C148C36008161F0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		1F6807641C148C36008161F0 /* RxDataSourceStarterKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxDataSourceStarterKit.swift; sourceTree = "<group>"; };
+		1F6807651C148C36008161F0 /* SectionedViewType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionedViewType.swift; sourceTree = "<group>"; };
+		1F6807661C148C36008161F0 /* SectionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionModel.swift; sourceTree = "<group>"; };
+		1F6807671C148C36008161F0 /* SectionModelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionModelType.swift; sourceTree = "<group>"; };
+		1F6807681C148C36008161F0 /* UISectionedViewType+RxAnimatedDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISectionedViewType+RxAnimatedDataSource.swift"; sourceTree = "<group>"; };
 		1FD048A41C13852A00B8FA06 /* APOD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APOD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FD048A71C13852A00B8FA06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FD048A91C13852A00B8FA06 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -76,7 +110,6 @@
 		1F6807401C13A8FF008161F0 /* NASA API */ = {
 			isa = PBXGroup;
 			children = (
-				1F68074E1C140297008161F0 /* Asteroids */,
 				1F6807411C13A962008161F0 /* Model */,
 				1F68073D1C138837008161F0 /* NASA.swift */,
 			);
@@ -95,12 +128,68 @@
 		1F68074E1C140297008161F0 /* Asteroids */ = {
 			isa = PBXGroup;
 			children = (
-				1FD048A91C13852A00B8FA06 /* HomeViewController.swift */,
-				1F6807481C13B494008161F0 /* AsteroidViewModel.swift */,
-				1F68074C1C1400A4008161F0 /* ShowAsteroidListSegue.swift */,
-				1F68074A1C13F8DD008161F0 /* AsteroidListViewController.swift */,
+				1F6807521C1485B4008161F0 /* View Model */,
+				1F6807511C1485B0008161F0 /* View */,
 			);
 			name = Asteroids;
+			sourceTree = "<group>";
+		};
+		1F6807511C1485B0008161F0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1FD048A91C13852A00B8FA06 /* HomeViewController.swift */,
+				1F68074C1C1400A4008161F0 /* ShowAsteroidListSegue.swift */,
+				1F68074A1C13F8DD008161F0 /* AsteroidListViewController.swift */,
+				1F6807531C14898E008161F0 /* NearEarthObjectTableViewCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		1F6807521C1485B4008161F0 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				1F68074F1C14856A008161F0 /* NearEarthObjectViewModel.swift */,
+				1F6807481C13B494008161F0 /* AsteroidViewModel.swift */,
+			);
+			name = "View Model";
+			sourceTree = "<group>";
+		};
+		1F6807551C148C1D008161F0 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				1F6807581C148C36008161F0 /* RxDataSourceStarterKit */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+		1F6807581C148C36008161F0 /* RxDataSourceStarterKit */ = {
+			isa = PBXGroup;
+			children = (
+				1F6807591C148C36008161F0 /* Changeset.swift */,
+				1F68075A1C148C36008161F0 /* DataSources */,
+				1F6807611C148C36008161F0 /* Differentiator.swift */,
+				1F6807621C148C36008161F0 /* ObservableConvertibleType+Differentiator.swift */,
+				1F6807631C148C36008161F0 /* README.md */,
+				1F6807641C148C36008161F0 /* RxDataSourceStarterKit.swift */,
+				1F6807651C148C36008161F0 /* SectionedViewType.swift */,
+				1F6807661C148C36008161F0 /* SectionModel.swift */,
+				1F6807671C148C36008161F0 /* SectionModelType.swift */,
+				1F6807681C148C36008161F0 /* UISectionedViewType+RxAnimatedDataSource.swift */,
+			);
+			path = RxDataSourceStarterKit;
+			sourceTree = "<group>";
+		};
+		1F68075A1C148C36008161F0 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				1F68075B1C148C36008161F0 /* RxCollectionViewSectionedAnimatedDataSource.swift */,
+				1F68075C1C148C36008161F0 /* RxCollectionViewSectionedDataSource.swift */,
+				1F68075D1C148C36008161F0 /* RxCollectionViewSectionedReloadDataSource.swift */,
+				1F68075E1C148C36008161F0 /* RxTableViewSectionedAnimatedDataSource.swift */,
+				1F68075F1C148C36008161F0 /* RxTableViewSectionedDataSource.swift */,
+				1F6807601C148C36008161F0 /* RxTableViewSectionedReloadDataSource.swift */,
+			);
+			path = DataSources;
 			sourceTree = "<group>";
 		};
 		1FD0489B1C13852A00B8FA06 = {
@@ -126,6 +215,8 @@
 		1FD048A61C13852A00B8FA06 /* APOD */ = {
 			isa = PBXGroup;
 			children = (
+				1F6807551C148C1D008161F0 /* Utility */,
+				1F68074E1C140297008161F0 /* Asteroids */,
 				1F6807401C13A8FF008161F0 /* NASA API */,
 				1FD048A71C13852A00B8FA06 /* AppDelegate.swift */,
 				1FD048AB1C13852A00B8FA06 /* Main.storyboard */,
@@ -315,12 +406,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F68074B1C13F8DD008161F0 /* AsteroidListViewController.swift in Sources */,
+				1F68076B1C148C36008161F0 /* RxCollectionViewSectionedDataSource.swift in Sources */,
+				1F6807721C148C36008161F0 /* README.md in Sources */,
 				1F68073E1C138837008161F0 /* NASA.swift in Sources */,
+				1F6807691C148C36008161F0 /* Changeset.swift in Sources */,
 				1F6807491C13B494008161F0 /* AsteroidViewModel.swift in Sources */,
+				1F6807771C148C36008161F0 /* UISectionedViewType+RxAnimatedDataSource.swift in Sources */,
+				1F68076E1C148C36008161F0 /* RxTableViewSectionedDataSource.swift in Sources */,
+				1F6807741C148C36008161F0 /* SectionedViewType.swift in Sources */,
 				1F6807461C13A9FD008161F0 /* NearEarthObject.swift in Sources */,
+				1F6807761C148C36008161F0 /* SectionModelType.swift in Sources */,
+				1F68076D1C148C36008161F0 /* RxTableViewSectionedAnimatedDataSource.swift in Sources */,
 				1F6807441C13A997008161F0 /* NeoWsResponse.swift in Sources */,
+				1F6807731C148C36008161F0 /* RxDataSourceStarterKit.swift in Sources */,
+				1F6807751C148C36008161F0 /* SectionModel.swift in Sources */,
+				1F6807541C14898E008161F0 /* NearEarthObjectTableViewCell.swift in Sources */,
+				1F6807501C14856A008161F0 /* NearEarthObjectViewModel.swift in Sources */,
+				1F68076C1C148C36008161F0 /* RxCollectionViewSectionedReloadDataSource.swift in Sources */,
+				1F6807711C148C36008161F0 /* ObservableConvertibleType+Differentiator.swift in Sources */,
 				1FD048AA1C13852A00B8FA06 /* HomeViewController.swift in Sources */,
+				1F6807701C148C36008161F0 /* Differentiator.swift in Sources */,
+				1F68076A1C148C36008161F0 /* RxCollectionViewSectionedAnimatedDataSource.swift in Sources */,
 				1FD048A81C13852A00B8FA06 /* AppDelegate.swift in Sources */,
+				1F68076F1C148C36008161F0 /* RxTableViewSectionedReloadDataSource.swift in Sources */,
 				1F68074D1C1400A4008161F0 /* ShowAsteroidListSegue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
