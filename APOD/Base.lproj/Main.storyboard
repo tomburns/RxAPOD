@@ -22,60 +22,75 @@
                                 <rect key="frame" x="0.0" y="64" width="600" height="836"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="4z0-KK-hXI">
-                                        <rect key="frame" x="8" y="0.0" width="584" height="615"/>
+                                        <rect key="frame" x="8" y="0.0" width="584" height="271"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rQ2-jn-GTO">
-                                                <rect key="frame" x="0.0" y="0.0" width="584" height="520"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="584" height="176"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oyw-Gj-BGS">
-                                                        <rect key="frame" x="0.0" y="0.0" width="584" height="44"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="l7x-Kq-4BA">
+                                                        <rect key="frame" x="0.0" y="0.0" width="584" height="88"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="900" text="Start:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oyw-Gj-BGS">
+                                                                <rect key="frame" x="0.0" y="0.0" width="38" height="88"/>
+                                                                <animations/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="88" id="fvz-Nd-ylO"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="DwB-vp-uF5">
+                                                                <rect key="frame" x="46" y="0.0" width="538" height="88"/>
+                                                                <animations/>
+                                                                <date key="date" timeIntervalSinceReferenceDate="471060268.49912399">
+                                                                    <!--2015-12-06 02:04:28 +0000-->
+                                                                </date>
+                                                            </datePicker>
+                                                        </subviews>
                                                         <animations/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="44" id="fvz-Nd-ylO"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="DwB-vp-uF5">
-                                                        <rect key="frame" x="0.0" y="44" width="584" height="216"/>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6Vi-4O-xjG">
+                                                        <rect key="frame" x="0.0" y="88" width="584" height="88"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="900" text="End:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bdt-4Z-871">
+                                                                <rect key="frame" x="0.0" y="0.0" width="38" height="88"/>
+                                                                <animations/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="88" id="2lL-dk-XH2"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="8ZH-gk-gjU">
+                                                                <rect key="frame" x="46" y="0.0" width="538" height="88"/>
+                                                                <animations/>
+                                                                <date key="date" timeIntervalSinceReferenceDate="471060268.49912399">
+                                                                    <!--2015-12-06 02:04:28 +0000-->
+                                                                </date>
+                                                            </datePicker>
+                                                        </subviews>
                                                         <animations/>
-                                                        <date key="date" timeIntervalSinceReferenceDate="471060268.49912399">
-                                                            <!--2015-12-06 02:04:28 +0000-->
-                                                        </date>
-                                                    </datePicker>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bdt-4Z-871">
-                                                        <rect key="frame" x="0.0" y="260" width="584" height="44"/>
-                                                        <animations/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="44" id="2lL-dk-XH2"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="8ZH-gk-gjU">
-                                                        <rect key="frame" x="0.0" y="304" width="584" height="216"/>
-                                                        <animations/>
-                                                        <date key="date" timeIntervalSinceReferenceDate="471060268.49912399">
-                                                            <!--2015-12-06 02:04:28 +0000-->
-                                                        </date>
-                                                    </datePicker>
+                                                    </stackView>
                                                 </subviews>
                                                 <animations/>
+                                                <constraints>
+                                                    <constraint firstItem="Oyw-Gj-BGS" firstAttribute="width" secondItem="Bdt-4Z-871" secondAttribute="width" id="y3l-15-j9S"/>
+                                                </constraints>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7Uw-f7-DO2">
-                                                <rect key="frame" x="0.0" y="528" width="584" height="21"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7Uw-f7-DO2">
+                                                <rect key="frame" x="0.0" y="184" width="584" height="20.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Number of Objects:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V8s-5D-fxQ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="150" height="21"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Number of Objects:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V8s-5D-fxQ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="134.5" height="20.5"/>
                                                         <animations/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;Object Count&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bva-yL-qRP">
-                                                        <rect key="frame" x="160" y="0.0" width="424" height="21"/>
+                                                        <rect key="frame" x="142" y="0.0" width="441.5" height="20.5"/>
                                                         <animations/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -84,18 +99,18 @@
                                                 </subviews>
                                                 <animations/>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8Xd-Mq-GaK">
-                                                <rect key="frame" x="0.0" y="557" width="584" height="21"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8Xd-Mq-GaK">
+                                                <rect key="frame" x="0.0" y="212" width="584" height="20.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Search Window: " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4kj-Q9-Rgk">
-                                                        <rect key="frame" x="0.0" y="0.0" width="150" height="21"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Search Window: " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4kj-Q9-Rgk">
+                                                        <rect key="frame" x="0.0" y="0.0" width="134.5" height="20.5"/>
                                                         <animations/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;Date Range&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P0L-QN-yKn">
-                                                        <rect key="frame" x="160" y="0.0" width="424" height="21"/>
+                                                        <rect key="frame" x="142" y="0.0" width="441.5" height="20.5"/>
                                                         <animations/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -105,7 +120,7 @@
                                                 <animations/>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XnO-13-9Gp">
-                                                <rect key="frame" x="0.0" y="585" width="584" height="30"/>
+                                                <rect key="frame" x="0.0" y="241" width="584" height="30"/>
                                                 <animations/>
                                                 <state key="normal" title="View Object Details"/>
                                                 <connections>
@@ -115,8 +130,14 @@
                                         </subviews>
                                         <animations/>
                                         <constraints>
+                                            <constraint firstItem="V8s-5D-fxQ" firstAttribute="width" secondItem="Bdt-4Z-871" secondAttribute="width" id="05X-k7-4aD"/>
                                             <constraint firstItem="4kj-Q9-Rgk" firstAttribute="width" secondItem="V8s-5D-fxQ" secondAttribute="width" id="Nly-26-8OY"/>
                                         </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="05X-k7-4aD"/>
+                                            </mask>
+                                        </variation>
                                     </stackView>
                                 </subviews>
                                 <animations/>
