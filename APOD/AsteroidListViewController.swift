@@ -17,7 +17,7 @@ class AsteroidListViewController: UIViewController, UITableViewDelegate, Asteroi
     
     var disposeBag = DisposeBag()
     
-    var viewModel: AsteroidViewModel! = nil
+    var viewModel: AsteroidViewModel!
     
     var objectCellViewModels = Variable([NearEarthObjectViewModel]())
     
@@ -29,7 +29,6 @@ class AsteroidListViewController: UIViewController, UITableViewDelegate, Asteroi
         super.viewDidLoad()
         
         viewModel.objectCellViewModels
-            .debug("objects")
             .driveNext { (newObjects) -> Void in
             self.objectCellViewModels.value = newObjects
             }
@@ -58,4 +57,5 @@ class AsteroidListViewController: UIViewController, UITableViewDelegate, Asteroi
             .bindTo(tableView.rx_itemsWithDataSource(dataSource))
             .addDisposableTo(disposeBag)
     }
+
 }
