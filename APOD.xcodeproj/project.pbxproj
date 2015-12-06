@@ -10,7 +10,9 @@
 		1F68073E1C138837008161F0 /* NASA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F68073D1C138837008161F0 /* NASA.swift */; };
 		1F6807441C13A997008161F0 /* NeoWsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6807431C13A997008161F0 /* NeoWsResponse.swift */; };
 		1F6807461C13A9FD008161F0 /* NearEarthObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6807451C13A9FD008161F0 /* NearEarthObject.swift */; };
-		1F6807491C13B494008161F0 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6807481C13B494008161F0 /* HomeViewModel.swift */; };
+		1F6807491C13B494008161F0 /* AsteroidViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6807481C13B494008161F0 /* AsteroidViewModel.swift */; };
+		1F68074B1C13F8DD008161F0 /* AsteroidListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F68074A1C13F8DD008161F0 /* AsteroidListViewController.swift */; };
+		1F68074D1C1400A4008161F0 /* ShowAsteroidListSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F68074C1C1400A4008161F0 /* ShowAsteroidListSegue.swift */; };
 		1FD048A81C13852A00B8FA06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD048A71C13852A00B8FA06 /* AppDelegate.swift */; };
 		1FD048AA1C13852A00B8FA06 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD048A91C13852A00B8FA06 /* HomeViewController.swift */; };
 		1FD048AD1C13852A00B8FA06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FD048AB1C13852A00B8FA06 /* Main.storyboard */; };
@@ -34,7 +36,9 @@
 		1F68073D1C138837008161F0 /* NASA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NASA.swift; sourceTree = "<group>"; };
 		1F6807431C13A997008161F0 /* NeoWsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeoWsResponse.swift; sourceTree = "<group>"; };
 		1F6807451C13A9FD008161F0 /* NearEarthObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearEarthObject.swift; sourceTree = "<group>"; };
-		1F6807481C13B494008161F0 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		1F6807481C13B494008161F0 /* AsteroidViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsteroidViewModel.swift; sourceTree = "<group>"; };
+		1F68074A1C13F8DD008161F0 /* AsteroidListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsteroidListViewController.swift; sourceTree = "<group>"; };
+		1F68074C1C1400A4008161F0 /* ShowAsteroidListSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowAsteroidListSegue.swift; sourceTree = "<group>"; };
 		1FD048A41C13852A00B8FA06 /* APOD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APOD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FD048A71C13852A00B8FA06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FD048A91C13852A00B8FA06 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +76,7 @@
 		1F6807401C13A8FF008161F0 /* NASA API */ = {
 			isa = PBXGroup;
 			children = (
+				1F68074E1C140297008161F0 /* Asteroids */,
 				1F6807411C13A962008161F0 /* Model */,
 				1F68073D1C138837008161F0 /* NASA.swift */,
 			);
@@ -85,6 +90,17 @@
 				1F6807451C13A9FD008161F0 /* NearEarthObject.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		1F68074E1C140297008161F0 /* Asteroids */ = {
+			isa = PBXGroup;
+			children = (
+				1FD048A91C13852A00B8FA06 /* HomeViewController.swift */,
+				1F6807481C13B494008161F0 /* AsteroidViewModel.swift */,
+				1F68074C1C1400A4008161F0 /* ShowAsteroidListSegue.swift */,
+				1F68074A1C13F8DD008161F0 /* AsteroidListViewController.swift */,
+			);
+			name = Asteroids;
 			sourceTree = "<group>";
 		};
 		1FD0489B1C13852A00B8FA06 = {
@@ -112,8 +128,6 @@
 			children = (
 				1F6807401C13A8FF008161F0 /* NASA API */,
 				1FD048A71C13852A00B8FA06 /* AppDelegate.swift */,
-				1FD048A91C13852A00B8FA06 /* HomeViewController.swift */,
-				1F6807481C13B494008161F0 /* HomeViewModel.swift */,
 				1FD048AB1C13852A00B8FA06 /* Main.storyboard */,
 				1FD048AE1C13852A00B8FA06 /* Assets.xcassets */,
 				1FD048B01C13852A00B8FA06 /* LaunchScreen.storyboard */,
@@ -300,12 +314,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F68074B1C13F8DD008161F0 /* AsteroidListViewController.swift in Sources */,
 				1F68073E1C138837008161F0 /* NASA.swift in Sources */,
-				1F6807491C13B494008161F0 /* HomeViewModel.swift in Sources */,
+				1F6807491C13B494008161F0 /* AsteroidViewModel.swift in Sources */,
 				1F6807461C13A9FD008161F0 /* NearEarthObject.swift in Sources */,
 				1F6807441C13A997008161F0 /* NeoWsResponse.swift in Sources */,
 				1FD048AA1C13852A00B8FA06 /* HomeViewController.swift in Sources */,
 				1FD048A81C13852A00B8FA06 /* AppDelegate.swift in Sources */,
+				1F68074D1C1400A4008161F0 /* ShowAsteroidListSegue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

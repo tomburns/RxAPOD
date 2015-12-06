@@ -1,5 +1,5 @@
 //
-//  HomeViewModel.swift
+//  AsteroidViewModel.swift
 //  APOD
 //
 //  Created by Tom Burns on 12/5/15.
@@ -9,7 +9,11 @@
 import RxSwift
 import RxCocoa
 
-struct HomeViewModel {
+protocol AsteroidViewModelConsumer {
+    var viewModel: AsteroidViewModel! { get }
+}
+
+struct AsteroidViewModel {
     
     typealias SearchRange = (start: NSDate, end: NSDate)
     
@@ -17,6 +21,9 @@ struct HomeViewModel {
         static let loadingText = "Loading…"
         static let errorText = "<Error>"
     }
+    
+    let objects: Driver<[NearEarthObject]>
+    private let _objects = PublishSubject<[NearEarthObject]>()
     
     let objectCount: Driver<String>
     private let _objectCount = BehaviorSubject<String>(value: Constants.loadingText)
@@ -27,10 +34,11 @@ struct HomeViewModel {
     private let _searchDescription = BehaviorSubject<String>(value: Constants.loadingText)
     
     init(searchRange: Driver<SearchRange>) {
-        self.objectCount = _objectCount.asDriver(onErrorJustReturn: Constants.errorText)
         self.searchDescription = _searchDescription.asDriver(onErrorJustReturn: Constants.errorText)
         self.searchRange = searchRange
         
+        self.objects = _objects.shareReplay(1).asDriver(onErrorJustReturn: [])
+        self.objectCount = objects.map { objects in return "\(objects.count)" }
         searchRange
             .filter { (start, end) -> Bool in
                 return start.compare(end) == NSComparisonResult.OrderedAscending
@@ -56,6 +64,10 @@ struct HomeViewModel {
                 let endDateString = dateFormatter.stringFromDate(response.endDate)
                 
                 self._searchDescription.onNext("\(startDateString) - \(endDateString)")
+                
+                self._objects.onNext(response.nearEarthObjects.reduce([], combine: { (acc, set) -> [NearEarthObject] in
+                    return acc + set.1
+                }))
                 
                 },
                 onError: { (error) -> Void in
@@ -88,5 +100,4 @@ struct HomeViewModel {
         self._objectCount.onNext(Constants.errorText)
         self._searchDescription.onNext(Constants.errorText)
     }
-    
 }

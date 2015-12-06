@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  AsteroidViewController.swift
 //  APOD
 //
 //  Created by Tom Burns on 12/5/15.
@@ -11,7 +11,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class HomeViewController: UIViewController {
+class AsteroidViewController: UIViewController, AsteroidViewModelConsumer {
     
     @IBOutlet weak var startDatePicker: UIDatePicker!
     @IBOutlet weak var endDatePicker: UIDatePicker!
@@ -19,16 +19,16 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var objectCountLabel: UILabel!
     @IBOutlet weak var dateRangeLabel: UILabel!
     
-    let searchRange = PublishSubject<HomeViewModel.SearchRange>()
+    let searchRange = PublishSubject<AsteroidViewModel.SearchRange>()
     
-    lazy var viewModel: HomeViewModel? = nil
+    var viewModel: AsteroidViewModel!
     
     private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let viewModel = HomeViewModel(searchRange: self.searchRange.asDriver(onErrorJustReturn: (NSDate(),NSDate())))
+        let viewModel = AsteroidViewModel(searchRange: self.searchRange.asDriver(onErrorJustReturn: (NSDate(),NSDate())))
         
         viewModel.refresh()
         

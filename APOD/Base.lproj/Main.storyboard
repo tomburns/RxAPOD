@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Home View Controller-->
+        <!--Asteroid View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="HomeViewController" customModule="APOD" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="AsteroidViewController" customModule="APOD" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="64" width="600" height="836"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="4z0-KK-hXI">
-                                        <rect key="frame" x="8" y="0.0" width="584" height="577"/>
+                                        <rect key="frame" x="8" y="0.0" width="584" height="615"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rQ2-jn-GTO">
                                                 <rect key="frame" x="0.0" y="0.0" width="584" height="520"/>
@@ -65,17 +65,17 @@
                                                 <animations/>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7Uw-f7-DO2">
-                                                <rect key="frame" x="0.0" y="528" width="584" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="528" width="584" height="21"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Number of Objects:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V8s-5D-fxQ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="150" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="150" height="21"/>
                                                         <animations/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;Object Count&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bva-yL-qRP">
-                                                        <rect key="frame" x="160" y="0.0" width="424" height="20.5"/>
+                                                        <rect key="frame" x="160" y="0.0" width="424" height="21"/>
                                                         <animations/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -85,17 +85,17 @@
                                                 <animations/>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8Xd-Mq-GaK">
-                                                <rect key="frame" x="0.0" y="556" width="584" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="557" width="584" height="21"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Search Window: " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4kj-Q9-Rgk">
-                                                        <rect key="frame" x="0.0" y="0.0" width="150" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="150" height="21"/>
                                                         <animations/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;Date Range&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P0L-QN-yKn">
-                                                        <rect key="frame" x="160" y="0.0" width="424" height="20.5"/>
+                                                        <rect key="frame" x="160" y="0.0" width="424" height="21"/>
                                                         <animations/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -104,6 +104,14 @@
                                                 </subviews>
                                                 <animations/>
                                             </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XnO-13-9Gp">
+                                                <rect key="frame" x="0.0" y="585" width="584" height="30"/>
+                                                <animations/>
+                                                <state key="normal" title="View Object Details"/>
+                                                <connections>
+                                                    <segue destination="dVD-Dr-l0H" kind="show" customClass="ShowAsteroidListSegue" customModule="APOD" customModuleProvider="target" id="zJ2-iT-4bj"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <animations/>
                                         <constraints>
@@ -149,6 +157,53 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1197" y="1101"/>
+        </scene>
+        <!--Asteroid List View Controller-->
+        <scene sceneID="4P9-oF-ayz">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="dVD-Dr-l0H" customClass="AsteroidListViewController" customModule="APOD" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JLM-E5-E2q"/>
+                        <viewControllerLayoutGuide type="bottom" id="jpd-je-Jh2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RqB-fE-h4I">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="900"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="P37-Hb-dlJ">
+                                <rect key="frame" x="0.0" y="64" width="600" height="836"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="4GV-Mu-b7F">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4GV-Mu-b7F" id="dWz-W4-d9h">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="P37-Hb-dlJ" firstAttribute="leading" secondItem="RqB-fE-h4I" secondAttribute="leading" id="CbG-UW-edO"/>
+                            <constraint firstItem="P37-Hb-dlJ" firstAttribute="top" secondItem="JLM-E5-E2q" secondAttribute="bottom" id="jEh-SZ-lXB"/>
+                            <constraint firstItem="jpd-je-Jh2" firstAttribute="top" secondItem="P37-Hb-dlJ" secondAttribute="bottom" id="lHS-v4-DJb"/>
+                            <constraint firstAttribute="trailing" secondItem="P37-Hb-dlJ" secondAttribute="trailing" id="q0J-Sx-MSz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="P37-Hb-dlJ" id="Cut-bR-esG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="otU-lz-lPL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1858" y="1101"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YcZ-ro-1Nl">
