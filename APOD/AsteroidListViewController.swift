@@ -29,7 +29,7 @@ class AsteroidListViewController: UIViewController, UITableViewDelegate, Asteroi
         super.viewDidLoad()
         
         viewModel.objectCellViewModels
-            .driveNext { (newObjects) -> Void in
+            .driveNext { [unowned self] (newObjects) -> Void in
             self.objectCellViewModels.value = newObjects
             }
             .addDisposableTo(disposeBag)
@@ -50,7 +50,6 @@ class AsteroidListViewController: UIViewController, UITableViewDelegate, Asteroi
         
         // reactive data source
         objectCellViewModels
-            .debug()
             .map{ objects in
                 return [SectionModel(model: "Near Earth Objects", items: objects)]
             }
