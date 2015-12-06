@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="08J-gM-J1L">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="o3p-jl-qtG">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Asteroid View Controller-->
+        <!--Near Earth Objects-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="AsteroidViewController" customModule="APOD" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vbp-RJ-kBZ">
-                                <rect key="frame" x="0.0" y="64" width="600" height="836"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="787"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="4z0-KK-hXI">
                                         <rect key="frame" x="8" y="0.0" width="584" height="271"/>
@@ -159,7 +159,7 @@
                             <constraint firstItem="Vbp-RJ-kBZ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="bCr-Jx-B3P"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="PXa-6C-RwC">
+                    <navigationItem key="navigationItem" title="Near Earth Objects" id="PXa-6C-RwC">
                         <barButtonItem key="rightBarButtonItem" title="Refresh" id="wCh-es-0KN">
                             <connections>
                                 <action selector="refresh:" destination="BYZ-38-t0r" id="h8c-Ow-egF"/>
@@ -177,7 +177,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1197" y="1101"/>
+            <point key="canvasLocation" x="2009" y="1101"/>
         </scene>
         <!--Asteroid List View Controller-->
         <scene sceneID="4P9-oF-ayz">
@@ -192,7 +192,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="P37-Hb-dlJ">
-                                <rect key="frame" x="0.0" y="64" width="600" height="836"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="787"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -205,6 +205,9 @@
                                             <animations/>
                                         </tableViewCellContentView>
                                         <animations/>
+                                        <connections>
+                                            <segue destination="n0K-L1-lfS" kind="show" id="Dms-Jz-PJL"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -224,12 +227,154 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="otU-lz-lPL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1858" y="1101"/>
+            <point key="canvasLocation" x="2670" y="1101"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--APOD-->
+        <scene sceneID="6gI-U9-F7X">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Af6-xD-sIL" customClass="APODHomeViewController" customModule="APOD" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8z0-sw-KWD"/>
+                        <viewControllerLayoutGuide type="bottom" id="F7J-ww-M4T"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LoI-eL-JP5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J0h-bX-m2T">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="C0U-dj-jDY">
+                                        <rect key="frame" x="8" y="0.0" width="584" height="88"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="toG-oL-TFG">
+                                                <rect key="frame" x="0.0" y="0.0" width="584" height="88"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="900" text="Date:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEg-UP-cbg">
+                                                        <rect key="frame" x="0.0" y="0.0" width="37" height="88"/>
+                                                        <animations/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="88" id="iCL-oJ-spA"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="W4l-eF-dUD">
+                                                        <rect key="frame" x="45" y="0.0" width="540" height="88"/>
+                                                        <animations/>
+                                                        <date key="date" timeIntervalSinceReferenceDate="471060268.49912399">
+                                                            <!--2015-12-06 02:04:28 +0000-->
+                                                        </date>
+                                                    </datePicker>
+                                                </subviews>
+                                                <animations/>
+                                            </stackView>
+                                        </subviews>
+                                        <animations/>
+                                    </stackView>
+                                </subviews>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="C0U-dj-jDY" secondAttribute="bottom" id="1Nh-xz-Xct"/>
+                                    <constraint firstAttribute="trailing" secondItem="C0U-dj-jDY" secondAttribute="trailing" constant="8" id="3Ub-Zr-86c"/>
+                                    <constraint firstItem="C0U-dj-jDY" firstAttribute="top" secondItem="J0h-bX-m2T" secondAttribute="top" id="Pzx-X7-7WT"/>
+                                    <constraint firstItem="C0U-dj-jDY" firstAttribute="leading" secondItem="J0h-bX-m2T" secondAttribute="leading" constant="8" id="UV6-zh-IYH"/>
+                                    <constraint firstItem="C0U-dj-jDY" firstAttribute="width" secondItem="J0h-bX-m2T" secondAttribute="width" constant="-16" id="hF2-Y6-qhF"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="F7J-ww-M4T" firstAttribute="top" secondItem="J0h-bX-m2T" secondAttribute="bottom" id="0xT-L3-GV5"/>
+                            <constraint firstItem="J0h-bX-m2T" firstAttribute="top" secondItem="8z0-sw-KWD" secondAttribute="bottom" id="3TU-wH-7k8"/>
+                            <constraint firstItem="J0h-bX-m2T" firstAttribute="leading" secondItem="LoI-eL-JP5" secondAttribute="leading" id="Fp5-NV-pCU"/>
+                            <constraint firstItem="J0h-bX-m2T" firstAttribute="width" secondItem="LoI-eL-JP5" secondAttribute="width" id="diM-25-AVq"/>
+                            <constraint firstAttribute="trailing" secondItem="J0h-bX-m2T" secondAttribute="trailing" id="qZB-Py-dbf"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="diM-25-AVq"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="APOD" id="xVa-Kl-ZMO"/>
+                    <connections>
+                        <outlet property="datePicker" destination="W4l-eF-dUD" id="gt9-Ze-jwa"/>
+                        <outlet property="retryButton" destination="S6h-u8-ar3" id="asi-Xk-fLh"/>
+                        <outlet property="retryView" destination="dDh-h0-SoW" id="J86-uR-iDt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c54-R4-xeu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="dDh-h0-SoW">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="VH3-p4-Urb">
+                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Unable to load APOD data. (API seems to 503 constantly)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EnZ-Wh-kyS">
+                                    <rect key="frame" x="0.0" y="0.0" width="240" height="84"/>
+                                    <animations/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="240" id="wht-G6-olw"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S6h-u8-ar3">
+                                    <rect key="frame" x="0.0" y="84" width="240" height="44"/>
+                                    <animations/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="S6L-08-C6p"/>
+                                    </constraints>
+                                    <state key="normal" title="Retry"/>
+                                </button>
+                            </subviews>
+                            <animations/>
+                            <constraints>
+                                <constraint firstItem="S6h-u8-ar3" firstAttribute="width" secondItem="VH3-p4-Urb" secondAttribute="width" id="AWU-jn-8Ky"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="VH3-p4-Urb" firstAttribute="top" secondItem="dDh-h0-SoW" secondAttribute="top" id="D5K-1V-GAR"/>
+                        <constraint firstAttribute="trailing" secondItem="VH3-p4-Urb" secondAttribute="trailing" id="UuC-CR-wRl"/>
+                        <constraint firstAttribute="bottom" secondItem="VH3-p4-Urb" secondAttribute="bottom" id="gbW-DB-ern"/>
+                        <constraint firstItem="VH3-p4-Urb" firstAttribute="leading" secondItem="dDh-h0-SoW" secondAttribute="leading" id="mzN-et-yxw"/>
+                    </constraints>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="2009" y="2319"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="FOh-bv-IaS">
+            <objects>
+                <viewController id="n0K-L1-lfS" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="utC-LN-pvu"/>
+                        <viewControllerLayoutGuide type="bottom" id="d4X-KU-0qP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="B9W-Rs-Ayw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="900"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oOa-SE-4mL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3442" y="1101"/>
+        </scene>
+        <!--NEOs-->
         <scene sceneID="YcZ-ro-1Nl">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="08J-gM-J1L" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="NEOs" id="Tvq-KC-HBz"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="tI9-Kb-ujH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -243,7 +388,46 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wug-BC-jkx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="460" y="1101"/>
+            <point key="canvasLocation" x="1272" y="1101"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="70D-Yq-fsT">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="o3p-jl-qtG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="JPf-FK-ovL">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="08J-gM-J1L" kind="relationship" relationship="viewControllers" id="FKm-nE-5og"/>
+                        <segue destination="GfO-1y-i5e" kind="relationship" relationship="viewControllers" id="8kl-1v-ofi"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1af-im-zIR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="504" y="1781"/>
+        </scene>
+        <!--APOD-->
+        <scene sceneID="KvL-mx-x10">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GfO-1y-i5e" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="APOD" id="HO0-Pk-6cr"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pkh-8m-iVt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Af6-xD-sIL" kind="relationship" relationship="rootViewController" id="fBb-0y-RTC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RgQ-b5-Zkd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1272" y="2319"/>
         </scene>
     </scenes>
 </document>

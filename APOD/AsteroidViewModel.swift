@@ -45,6 +45,9 @@ struct AsteroidViewModel {
         self.objectCellViewModels = objects.map { objects in return objects.map { obj in NearEarthObjectViewModel(object: obj) } }
         
         searchRange
+            .distinctUntilChanged { (lhs, rhs) -> Bool in
+                return lhs.0.isEqualToDate(rhs.0) && lhs.1.isEqualToDate(rhs.1)
+            }
             .filter { (start, end) -> Bool in
                 return start.compare(end) == NSComparisonResult.OrderedAscending
             }

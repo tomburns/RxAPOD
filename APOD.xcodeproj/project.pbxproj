@@ -29,6 +29,9 @@
 		1F6807751C148C36008161F0 /* SectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6807661C148C36008161F0 /* SectionModel.swift */; };
 		1F6807761C148C36008161F0 /* SectionModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6807671C148C36008161F0 /* SectionModelType.swift */; };
 		1F6807771C148C36008161F0 /* UISectionedViewType+RxAnimatedDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6807681C148C36008161F0 /* UISectionedViewType+RxAnimatedDataSource.swift */; };
+		1F68077C1C14BAE4008161F0 /* APODResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F68077B1C14BAE4008161F0 /* APODResponse.swift */; };
+		1F68077E1C14BD01008161F0 /* APODViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F68077D1C14BD01008161F0 /* APODViewModel.swift */; };
+		1F6807801C14BD9D008161F0 /* APODHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F68077F1C14BD9D008161F0 /* APODHomeViewController.swift */; };
 		1FD048A81C13852A00B8FA06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD048A71C13852A00B8FA06 /* AppDelegate.swift */; };
 		1FD048AA1C13852A00B8FA06 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD048A91C13852A00B8FA06 /* HomeViewController.swift */; };
 		1FD048AD1C13852A00B8FA06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FD048AB1C13852A00B8FA06 /* Main.storyboard */; };
@@ -72,6 +75,9 @@
 		1F6807661C148C36008161F0 /* SectionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionModel.swift; sourceTree = "<group>"; };
 		1F6807671C148C36008161F0 /* SectionModelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionModelType.swift; sourceTree = "<group>"; };
 		1F6807681C148C36008161F0 /* UISectionedViewType+RxAnimatedDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISectionedViewType+RxAnimatedDataSource.swift"; sourceTree = "<group>"; };
+		1F68077B1C14BAE4008161F0 /* APODResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APODResponse.swift; sourceTree = "<group>"; };
+		1F68077D1C14BD01008161F0 /* APODViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APODViewModel.swift; sourceTree = "<group>"; };
+		1F68077F1C14BD9D008161F0 /* APODHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APODHomeViewController.swift; sourceTree = "<group>"; };
 		1FD048A41C13852A00B8FA06 /* APOD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APOD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FD048A71C13852A00B8FA06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FD048A91C13852A00B8FA06 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -118,8 +124,8 @@
 		1F6807411C13A962008161F0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				1F6807431C13A997008161F0 /* NeoWsResponse.swift */,
-				1F6807451C13A9FD008161F0 /* NearEarthObject.swift */,
+				1F68077A1C14BAD6008161F0 /* Asteroids */,
+				1F6807791C14BACF008161F0 /* APOD */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -191,6 +197,32 @@
 			path = DataSources;
 			sourceTree = "<group>";
 		};
+		1F6807781C14BA82008161F0 /* APOD */ = {
+			isa = PBXGroup;
+			children = (
+				1F68077D1C14BD01008161F0 /* APODViewModel.swift */,
+				1F68077F1C14BD9D008161F0 /* APODHomeViewController.swift */,
+			);
+			name = APOD;
+			sourceTree = "<group>";
+		};
+		1F6807791C14BACF008161F0 /* APOD */ = {
+			isa = PBXGroup;
+			children = (
+				1F68077B1C14BAE4008161F0 /* APODResponse.swift */,
+			);
+			name = APOD;
+			sourceTree = "<group>";
+		};
+		1F68077A1C14BAD6008161F0 /* Asteroids */ = {
+			isa = PBXGroup;
+			children = (
+				1F6807431C13A997008161F0 /* NeoWsResponse.swift */,
+				1F6807451C13A9FD008161F0 /* NearEarthObject.swift */,
+			);
+			name = Asteroids;
+			sourceTree = "<group>";
+		};
 		1FD0489B1C13852A00B8FA06 = {
 			isa = PBXGroup;
 			children = (
@@ -214,6 +246,7 @@
 		1FD048A61C13852A00B8FA06 /* APOD */ = {
 			isa = PBXGroup;
 			children = (
+				1F6807781C14BA82008161F0 /* APOD */,
 				1F68074E1C140297008161F0 /* Asteroids */,
 				1F6807401C13A8FF008161F0 /* NASA API */,
 				1F6807551C148C1D008161F0 /* Utility */,
@@ -404,11 +437,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F68077E1C14BD01008161F0 /* APODViewModel.swift in Sources */,
 				1F68074B1C13F8DD008161F0 /* AsteroidListViewController.swift in Sources */,
 				1F68076B1C148C36008161F0 /* RxCollectionViewSectionedDataSource.swift in Sources */,
 				1F68073E1C138837008161F0 /* NASA.swift in Sources */,
 				1F6807691C148C36008161F0 /* Changeset.swift in Sources */,
 				1F6807491C13B494008161F0 /* AsteroidViewModel.swift in Sources */,
+				1F68077C1C14BAE4008161F0 /* APODResponse.swift in Sources */,
 				1F6807771C148C36008161F0 /* UISectionedViewType+RxAnimatedDataSource.swift in Sources */,
 				1F68076E1C148C36008161F0 /* RxTableViewSectionedDataSource.swift in Sources */,
 				1F6807741C148C36008161F0 /* SectionedViewType.swift in Sources */,
@@ -417,6 +452,7 @@
 				1F68076D1C148C36008161F0 /* RxTableViewSectionedAnimatedDataSource.swift in Sources */,
 				1F6807441C13A997008161F0 /* NeoWsResponse.swift in Sources */,
 				1F6807731C148C36008161F0 /* RxDataSourceStarterKit.swift in Sources */,
+				1F6807801C14BD9D008161F0 /* APODHomeViewController.swift in Sources */,
 				1F6807751C148C36008161F0 /* SectionModel.swift in Sources */,
 				1F6807541C14898E008161F0 /* NearEarthObjectTableViewCell.swift in Sources */,
 				1F6807501C14856A008161F0 /* NearEarthObjectViewModel.swift in Sources */,

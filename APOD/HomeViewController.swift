@@ -34,12 +34,12 @@ class AsteroidViewController: UIViewController, AsteroidViewModelConsumer {
         
         configureDatePickers()
         
-        viewModel.objectCount.driveNext { (count) -> Void in
+        viewModel.objectCount.driveNext { [unowned self] (count) -> Void in
             self.objectCountLabel.text = count
             }
             .addDisposableTo(disposeBag)
         
-        viewModel.searchDescription.driveNext { (description) -> Void in
+        viewModel.searchDescription.driveNext { [unowned self] (description) -> Void in
             self.dateRangeLabel.text = description
             }
             .addDisposableTo(disposeBag)
@@ -54,7 +54,7 @@ class AsteroidViewController: UIViewController, AsteroidViewModelConsumer {
     
     
     private func configureDatePickers() {
-        startDatePicker.rx_date.subscribeNext { (date) -> Void in
+        startDatePicker.rx_date.subscribeNext { [unowned self] (date) -> Void in
             defer {
                 // always emit fresh search range when start date is set
                 self.searchRange.onNext((self.startDatePicker.date,self.endDatePicker.date))
@@ -82,7 +82,7 @@ class AsteroidViewController: UIViewController, AsteroidViewModelConsumer {
             .addDisposableTo(disposeBag)
         
         
-        endDatePicker.rx_date.subscribeNext { (date) -> Void in
+        endDatePicker.rx_date.subscribeNext { [unowned self] (date) -> Void in
             defer {
                 // always emit fresh search range when end date is set
                 self.searchRange.onNext((self.startDatePicker.date,self.endDatePicker.date))
